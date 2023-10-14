@@ -1,0 +1,168 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;
+
+	cout << "Введите целое число (от 1 до 100 000):";
+	cin >> n;
+
+	if (n < 1 || n > 100000)
+		cout << "Некорректные данные, введите число от 1 до 100 000";
+	else
+	{
+		int thousands = n / 1000;
+		
+		if (thousands > 0 && thousands <= 100) {
+			
+			if (n >= 100000) {
+				cout << "сто ";
+				thousands -= 100;
+			}
+			else if (n >= 90000) {
+				cout << "девяносто ";
+				thousands -= 90;
+			}
+			else if (n >= 80000) {
+				cout << "восемьдесят ";
+				thousands -= 80;
+			}
+			else if (n >= 70000) {
+				cout << "семьдесят ";
+				thousands -= 70;
+			}
+			else if (n >= 60000) {
+				cout << "шестьдесят ";
+				thousands -= 60;
+			}
+			else if (n >= 50000) {
+				cout << "пятьдесят ";
+				thousands -= 50;
+			}
+			else if (n >= 40000) {
+				cout << "сорок ";
+				thousands -= 40;
+			}
+			else if (n >= 30000) {
+				cout << "тридцать ";
+				thousands -= 30;
+			}
+			else if (n >= 20000) {
+				cout << "двадцать ";
+				thousands -= 20;
+			}
+            
+			if (thousands > 0 && thousands <= 19) {
+				if (thousands == 1) cout << "одна тысяча ";
+				else if (thousands == 2) cout << "две тысячи ";
+				else if (thousands == 3) cout << "три тысячи ";
+				else if (thousands == 4) cout << "четыре тысячи ";
+				else if (thousands == 5) cout << "пять тысяч ";
+				else if (thousands == 6) cout << "шесть тысяч ";
+				else if (thousands == 7) cout << "семь тысяч ";
+				else if (thousands == 8) cout << "восемь тысяч ";
+				else if (thousands == 9) cout << "девять тысяч ";
+				else if (thousands == 10) cout << "десять тысяч ";
+				else if (thousands == 11) cout << "одиннадцать тысяч ";
+				else if (thousands == 12) cout << "двенадцать тысяч ";
+				else if (thousands == 13) cout << "тринадцать тысяч ";
+				else if (thousands == 14) cout << "четырнадцать тысяч ";
+				else if (thousands == 15) cout << "пятнадцать тысяч ";
+				else if (thousands == 16) cout << "шестнадцать тысяч ";
+				else if (thousands == 17) cout << "семнадцать тысяч ";
+				else if (thousands == 18) cout << "восемнадцать тысяч ";
+				else if (thousands == 19) cout << "девятнадцать тысяч ";
+			}
+			else if (thousands % 10 == 0) {
+                cout << "тысяч ";
+            }
+		}
+			
+		if ((n / 100) % 10 == 1) 
+			cout << "сто ";
+		else if ((n / 100) % 10 == 2) 
+			cout << "двести ";
+		else if ((n / 100) % 10 == 3) 
+			cout << "триста ";
+		else if ((n / 100) % 10 == 4) 
+			cout << "четыреста ";
+		else if ((n / 100) % 10 == 5) 
+			cout << "пятьсот ";
+		else if ((n / 100) % 10 == 6) 
+			cout << "шестьсот ";
+		else if ((n / 100) % 10 == 7) 
+			cout << "семьсот ";
+		else if ((n / 100) % 10 == 8) 
+			cout << "восемьсот ";
+		else if ((n / 100) % 10 == 9) 
+			cout << "девятьсот ";
+
+		if ((n / 10) % 10 == 1)
+		{
+			if (n % 10 == 0) 
+				cout << "десять рублей";
+			else if (n % 10 == 1) 
+				cout << "одинадцать рублей";
+			else if (n % 10 == 2) 
+				cout << "двенадцать рублей";
+			else if (n % 10 == 3) 
+				cout << "тринадцать рублей";
+			else if (n % 10 == 4) 
+				cout << "четырнадцать рублей";
+			else if (n % 10 == 5) 
+				cout << "пятнадцать рублей";
+			else if (n % 10 == 6) 
+				cout << "шестнадцать рублей";
+			else if (n % 10 == 7) 
+				cout << "семнадцать рублей";
+			else if (n % 10 == 8) 
+				cout << "восемнадцать рублей";
+			else if (n % 10 == 9) 
+				cout << "девятнадцать рублей";
+		}
+
+		if ((n / 10) % 10 == 2) 
+			cout << "двадцать ";
+		else if ((n / 10) % 10 == 3) 
+			cout << "тридцать ";
+		else if ((n / 10) % 10 == 4) 
+			cout << "сорок ";
+		else if ((n / 10) % 10 == 5) 
+			cout << "пятьдесят ";
+		else if ((n / 10) % 10 == 6) 
+			cout << "шестьдесят ";
+		else if ((n / 10) % 10 == 7) 
+			cout << "семьдесят ";
+		else if ((n/ 10) % 10 == 8) 
+			cout << "восемьдесят ";
+		else if ((n / 10) % 10 == 9) 
+			cout << "девяносто ";
+
+		if ((n / 10) % 10 != 1)
+		{
+			if (n % 10 == 0) 
+				cout << "рублей";
+			else if (n % 10 == 1) 
+				cout << "один рубль ";
+			else if (n % 10 == 2) 
+				cout << "два рубля ";
+			else if (n % 10 == 3) 
+				cout << "три рубля ";
+			else if (n % 10 == 4) 
+				cout << "четыре рубля ";
+			else if (n % 10 == 5) 
+				cout << "пять рублей ";
+			else if (n % 10 == 6) 
+				cout << "шесть рублей ";
+			else if (n % 10 == 7) 
+				cout << "семь рублей ";
+			else if (n % 10 == 8) 
+				cout << "восемь рублей ";
+			else 
+				cout << "девять рублей ";
+		}
+	}
+	return 0;
+}
